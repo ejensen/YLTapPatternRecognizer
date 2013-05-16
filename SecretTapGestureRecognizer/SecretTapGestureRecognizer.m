@@ -1,16 +1,16 @@
 //
-//  STSecretTapGestureRecognizer.m
+//  SecretTapGestureRecognizer.m
 //  SecretTapGestureRecognizer
 //
 //  Created by Eric Jensen on 5/15/13.
 //  Copyright (c) 2013 Yeti Labs. All rights reserved.
 //
 
-#import "STSecretTapGestureRecognizer.h"
+#import "SecretTapGestureRecognizer.h"
 
 #import <UIKit/UIGestureRecognizerSubclass.h>
 
-@interface STSecretTapGestureRecognizer () {
+@interface SecretTapGestureRecognizer () {
     NSTimeInterval _secretTapDuration;
     NSTimeInterval _lastTapTimestamp;
     NSUInteger _tapIndex;
@@ -20,7 +20,7 @@
 
 @end
 
-@implementation STSecretTapGestureRecognizer
+@implementation SecretTapGestureRecognizer
 
 @synthesize secretPattern = _secretTapPattern;
 

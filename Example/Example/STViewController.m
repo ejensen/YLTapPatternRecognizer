@@ -7,17 +7,17 @@
 //
 
 #import "STViewController.h"
-#import "STSecretTapGestureRecognizer.h"
+#import "SecretTapGestureRecognizer.h"
 
 @implementation STViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.view addGestureRecognizer:[[STSecretTapGestureRecognizer alloc] initWithTarget:self action:@selector(didSecretTap:)]];
+    [self.view addGestureRecognizer:[[SecretTapGestureRecognizer alloc] initWithTarget:self action:@selector(didSecretTap:)]];
 }
 
-- (void)didSecretTap:(STSecretTapGestureRecognizer *)gestureRecognizer
+- (void)didSecretTap:(SecretTapGestureRecognizer *)gestureRecognizer
 {
     NSLog(@"Pattern Matched!");
     dispatch_async(dispatch_get_main_queue(), ^{

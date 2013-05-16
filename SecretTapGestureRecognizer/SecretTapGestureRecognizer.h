@@ -1,5 +1,5 @@
 //
-//  STSecretTapGestureRecognizer.h
+//  SecretTapGestureRecognizer.h
 //  SecretTapGestureRecognizer
 //
 //  Created by Eric Jensen on 5/15/13.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface STSecretTapGestureRecognizer : UIGestureRecognizer
+@interface SecretTapGestureRecognizer : UIGestureRecognizer
 
 @property (nonatomic, copy) NSArray *secretPattern;
 @property (nonatomic, assign) NSTimeInterval minimumTapInterval;
