@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07527C991745A069002559D2 /* AWinnerIsYou.png in Resources */ = {isa = PBXBuildFile; fileRef = 07527C981745A069002559D2 /* AWinnerIsYou.png */; };
+		07527C9E1745BB98002559D2 /* Secret.png in Resources */ = {isa = PBXBuildFile; fileRef = 07527C9D1745BB98002559D2 /* Secret.png */; };
+		07527CA01745BD34002559D2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07527C9F1745BD34002559D2 /* AVFoundation.framework */; };
+		07527CA21745BDA3002559D2 /* SecretUnlock.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 07527CA11745BDA3002559D2 /* SecretUnlock.mp3 */; };
 		07C02DFB1745891E0015DA69 /* SecretTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C02DFA1745891E0015DA69 /* SecretTapGestureRecognizer.m */; };
 		07E92D53170BAE5200402366 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E92D52170BAE5200402366 /* UIKit.framework */; };
 		07E92D55170BAE5200402366 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E92D54170BAE5200402366 /* Foundation.framework */; };
@@ -23,7 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		07527C981745A069002559D2 /* AWinnerIsYou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AWinnerIsYou.png; sourceTree = "<group>"; };
+		07527C9D1745BB98002559D2 /* Secret.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Secret.png; sourceTree = "<group>"; };
+		07527C9F1745BD34002559D2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		07527CA11745BDA3002559D2 /* SecretUnlock.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SecretUnlock.mp3; sourceTree = "<group>"; };
 		07C02DF91745891E0015DA69 /* SecretTapGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecretTapGestureRecognizer.h; sourceTree = "<group>"; };
 		07C02DFA1745891E0015DA69 /* SecretTapGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecretTapGestureRecognizer.m; sourceTree = "<group>"; };
 		07E92D4F170BAE5200402366 /* SecretTapGestureRecognizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecretTapGestureRecognizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +56,7 @@
 				07E92D53170BAE5200402366 /* UIKit.framework in Frameworks */,
 				07E92D55170BAE5200402366 /* Foundation.framework in Frameworks */,
 				07E92D57170BAE5200402366 /* CoreGraphics.framework in Frameworks */,
+				07527CA01745BD34002559D2 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +97,7 @@
 				07E92D52170BAE5200402366 /* UIKit.framework */,
 				07E92D54170BAE5200402366 /* Foundation.framework */,
 				07E92D56170BAE5200402366 /* CoreGraphics.framework */,
+				07527C9F1745BD34002559D2 /* AVFoundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -120,7 +126,8 @@
 				07E92D64170BAE5300402366 /* Default.png */,
 				07E92D66170BAE5300402366 /* Default@2x.png */,
 				07E92D68170BAE5300402366 /* Default-568h@2x.png */,
-				07527C981745A069002559D2 /* AWinnerIsYou.png */,
+				07527C9D1745BB98002559D2 /* Secret.png */,
+				07527CA11745BDA3002559D2 /* SecretUnlock.mp3 */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -182,7 +189,8 @@
 				07E92D67170BAE5300402366 /* Default@2x.png in Resources */,
 				07E92D69170BAE5300402366 /* Default-568h@2x.png in Resources */,
 				07E92D6C170BAE5300402366 /* MainStoryboard.storyboard in Resources */,
-				07527C991745A069002559D2 /* AWinnerIsYou.png in Resources */,
+				07527C9E1745BB98002559D2 /* Secret.png in Resources */,
+				07527CA21745BDA3002559D2 /* SecretUnlock.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

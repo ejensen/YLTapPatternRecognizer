@@ -12,8 +12,8 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="center" image="AWinnerIsYou.png" id="neR-1T-HGM">
-                                <rect key="frame" x="20" y="194" width="280" height="160"/>
+                            <imageView hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="center" image="Secret.png" id="neR-1T-HGM">
+                                <rect key="frame" x="40" y="194" width="240" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -28,7 +28,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="AWinnerIsYou.png" width="280" height="160"/>
+        <image name="Secret.png" width="240" height="160"/>
     </resources>
     <classes>
         <class className="STViewController" superclassName="UIViewController">
