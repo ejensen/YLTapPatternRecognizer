@@ -19,14 +19,18 @@
 
 - (void)didSecretTap:(SecretTapGestureRecognizer *)gestureRecognizer
 {
-    NSLog(@"Pattern Matched!");
-    dispatch_async(dispatch_get_main_queue(), ^{
-        self.view.backgroundColor = [UIColor greenColor];
-    });
+    NSLog(@"Secret Unlocked!");
+    
+    self.successImageView.alpha = 0;
+    self.successImageView.hidden = NO;
+    [UIView animateWithDuration:0.3 animations:^{
+        self.successImageView.alpha = 1;
+    }];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    self.successImageView.hidden = YES;
     self.view.backgroundColor = [UIColor blackColor];
 }
 

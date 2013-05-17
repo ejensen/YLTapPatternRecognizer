@@ -10,4 +10,6 @@
 
 @interface STViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *successImageView;
+
 @end
