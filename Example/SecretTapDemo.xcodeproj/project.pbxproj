@@ -30,14 +30,14 @@
 		07527CA11745BDA3002559D2 /* SecretUnlock.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SecretUnlock.mp3; sourceTree = "<group>"; };
 		07C02DF91745891E0015DA69 /* SecretTapGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecretTapGestureRecognizer.h; sourceTree = "<group>"; };
 		07C02DFA1745891E0015DA69 /* SecretTapGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecretTapGestureRecognizer.m; sourceTree = "<group>"; };
-		07E92D4F170BAE5200402366 /* SecretTapGestureRecognizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecretTapGestureRecognizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		07E92D4F170BAE5200402366 /* SecretTapDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecretTapDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07E92D52170BAE5200402366 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		07E92D54170BAE5200402366 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		07E92D56170BAE5200402366 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		07E92D5A170BAE5200402366 /* SecretTapGestureRecognizer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SecretTapGestureRecognizer-Info.plist"; sourceTree = "<group>"; };
+		07E92D5A170BAE5200402366 /* SecretTapDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SecretTapDemo-Info.plist"; sourceTree = "<group>"; };
 		07E92D5C170BAE5200402366 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		07E92D5E170BAE5200402366 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		07E92D60170BAE5200402366 /* SecretTapGestureRecognizer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SecretTapGestureRecognizer-Prefix.pch"; sourceTree = "<group>"; };
+		07E92D60170BAE5200402366 /* SecretTapDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SecretTapDemo-Prefix.pch"; sourceTree = "<group>"; };
 		07E92D61170BAE5200402366 /* STAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STAppDelegate.h; sourceTree = "<group>"; };
 		07E92D62170BAE5200402366 /* STAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STAppDelegate.m; sourceTree = "<group>"; };
 		07E92D64170BAE5300402366 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -86,7 +86,7 @@
 		07E92D50170BAE5200402366 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				07E92D4F170BAE5200402366 /* SecretTapGestureRecognizer.app */,
+				07E92D4F170BAE5200402366 /* SecretTapDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -113,16 +113,16 @@
 				07E92D59170BAE5200402366 /* Supporting Files */,
 			);
 			name = Demo;
-			path = Example;
+			path = SecretTapDemo;
 			sourceTree = "<group>";
 		};
 		07E92D59170BAE5200402366 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				07E92D5A170BAE5200402366 /* SecretTapGestureRecognizer-Info.plist */,
+				07E92D5A170BAE5200402366 /* SecretTapDemo-Info.plist */,
 				07E92D5B170BAE5200402366 /* InfoPlist.strings */,
 				07E92D5E170BAE5200402366 /* main.m */,
-				07E92D60170BAE5200402366 /* SecretTapGestureRecognizer-Prefix.pch */,
+				07E92D60170BAE5200402366 /* SecretTapDemo-Prefix.pch */,
 				07E92D64170BAE5300402366 /* Default.png */,
 				07E92D66170BAE5300402366 /* Default@2x.png */,
 				07E92D68170BAE5300402366 /* Default-568h@2x.png */,
@@ -135,9 +135,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		07E92D4E170BAE5200402366 /* SecretTapGestureRecognizer */ = {
+		07E92D4E170BAE5200402366 /* SecretTapDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 07E92D75170BAE5300402366 /* Build configuration list for PBXNativeTarget "SecretTapGestureRecognizer" */;
+			buildConfigurationList = 07E92D75170BAE5300402366 /* Build configuration list for PBXNativeTarget "SecretTapDemo" */;
 			buildPhases = (
 				07E92D4B170BAE5200402366 /* Sources */,
 				07E92D4C170BAE5200402366 /* Frameworks */,
@@ -147,9 +147,9 @@
 			);
 			dependencies = (
 			);
-			name = SecretTapGestureRecognizer;
+			name = SecretTapDemo;
 			productName = SecretTapGestureRecognizer;
-			productReference = 07E92D4F170BAE5200402366 /* SecretTapGestureRecognizer.app */;
+			productReference = 07E92D4F170BAE5200402366 /* SecretTapDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -162,7 +162,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Yeti Labs";
 			};
-			buildConfigurationList = 07E92D4A170BAE5200402366 /* Build configuration list for PBXProject "Example" */;
+			buildConfigurationList = 07E92D4A170BAE5200402366 /* Build configuration list for PBXProject "SecretTapDemo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -174,7 +174,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				07E92D4E170BAE5200402366 /* SecretTapGestureRecognizer */,
+				07E92D4E170BAE5200402366 /* SecretTapDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -294,8 +294,8 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Example/SecretTapGestureRecognizer-Prefix.pch";
-				INFOPLIST_FILE = "$(SRCROOT)/Example/SecretTapGestureRecognizer-Info.plist";
+				GCC_PREFIX_HEADER = "SecretTapDemo/SecretTapDemo-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/SecretTapDemo/SecretTapDemo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -307,8 +307,8 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Example/SecretTapGestureRecognizer-Prefix.pch";
-				INFOPLIST_FILE = "$(SRCROOT)/Example/SecretTapGestureRecognizer-Info.plist";
+				GCC_PREFIX_HEADER = "SecretTapDemo/SecretTapDemo-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/SecretTapDemo/SecretTapDemo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -318,7 +318,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		07E92D4A170BAE5200402366 /* Build configuration list for PBXProject "Example" */ = {
+		07E92D4A170BAE5200402366 /* Build configuration list for PBXProject "SecretTapDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				07E92D73170BAE5300402366 /* Debug */,
@@ -327,7 +327,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		07E92D75170BAE5300402366 /* Build configuration list for PBXNativeTarget "SecretTapGestureRecognizer" */ = {
+		07E92D75170BAE5300402366 /* Build configuration list for PBXNativeTarget "SecretTapDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				07E92D76170BAE5300402366 /* Debug */,
