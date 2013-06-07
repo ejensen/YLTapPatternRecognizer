@@ -24,17 +24,17 @@
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    self.tapFlashView.alpha = 0.08;
+    self.tapFlashView.alpha = 0.9;
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-    self.tapFlashView.alpha = 0;
+    self.tapFlashView.alpha = 1;
 }
 
 - (void)didSecretTap:(SecretTapGestureRecognizer *)gestureRecognizer {
     NSLog(@"Secret Unlocked!");
     
-    self.tapFlashView.alpha = 0;
+    self.tapFlashView.alpha = 1;
     [self performSelectorInBackground:@selector(playChime) withObject:nil];
     [self performSegueWithIdentifier:@"SecretUnlockedSegue" sender:self];
 }

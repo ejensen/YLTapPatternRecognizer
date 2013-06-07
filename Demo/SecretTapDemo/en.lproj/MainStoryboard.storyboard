@@ -12,20 +12,15 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="Bookcase.jpg" id="QZa-KR-Jja">
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="Bookcase.jpg" id="QZa-KR-Jja">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <view opaque="NO" autoresizesSubviews="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" id="dpJ-I3-ktT">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="tapFlashView" destination="dpJ-I3-ktT" id="ZYN-cW-xDM"/>
+                        <outlet property="tapFlashView" destination="QZa-KR-Jja" id="5Q8-RI-CwR"/>
                         <segue destination="2A5-3P-eG4" kind="custom" identifier="SecretUnlockedSegue" customClass="GC3DFlipTransitionStyleSegue" id="eFx-u2-bhA"/>
                     </connections>
                 </viewController>
