@@ -10,6 +10,6 @@
 
 @interface STViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIImageView *successImageView;
+@property (weak, nonatomic) IBOutlet UIView *tapFlashView;
 
 @end

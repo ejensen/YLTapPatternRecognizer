@@ -10,7 +10,14 @@
 		07527C9E1745BB98002559D2 /* Secret.png in Resources */ = {isa = PBXBuildFile; fileRef = 07527C9D1745BB98002559D2 /* Secret.png */; };
 		07527CA01745BD34002559D2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07527C9F1745BD34002559D2 /* AVFoundation.framework */; };
 		07527CA21745BDA3002559D2 /* SecretUnlock.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 07527CA11745BDA3002559D2 /* SecretUnlock.mp3 */; };
+		07832B5A175C3AA600C2C7CC /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 07832B59175C3AA600C2C7CC /* Icon.png */; };
 		07C02DFB1745891E0015DA69 /* SecretTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C02DFA1745891E0015DA69 /* SecretTapGestureRecognizer.m */; };
+		07DD43AC176178AC00492F6A /* GC3DFlipTransitionStyleSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DD43A9176178AC00492F6A /* GC3DFlipTransitionStyleSegue.m */; };
+		07DD43AE176178AC00492F6A /* wood.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 07DD43AB176178AC00492F6A /* wood.jpg */; };
+		07DD43B51761792900492F6A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DD43AF176178F800492F6A /* QuartzCore.framework */; };
+		07DD43B61761792900492F6A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DD43B31761790C00492F6A /* OpenGLES.framework */; };
+		07DD43B71761792900492F6A /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DD43B11761790200492F6A /* GLKit.framework */; };
+		07DD43BB17617C3400492F6A /* Bookcase.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 07DD43BA17617C3400492F6A /* Bookcase.jpg */; };
 		07E92D53170BAE5200402366 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E92D52170BAE5200402366 /* UIKit.framework */; };
 		07E92D55170BAE5200402366 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E92D54170BAE5200402366 /* Foundation.framework */; };
 		07E92D57170BAE5200402366 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E92D56170BAE5200402366 /* CoreGraphics.framework */; };
@@ -28,8 +35,16 @@
 		07527C9D1745BB98002559D2 /* Secret.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Secret.png; sourceTree = "<group>"; };
 		07527C9F1745BD34002559D2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		07527CA11745BDA3002559D2 /* SecretUnlock.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SecretUnlock.mp3; sourceTree = "<group>"; };
+		07832B59175C3AA600C2C7CC /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		07C02DF91745891E0015DA69 /* SecretTapGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecretTapGestureRecognizer.h; sourceTree = "<group>"; };
 		07C02DFA1745891E0015DA69 /* SecretTapGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecretTapGestureRecognizer.m; sourceTree = "<group>"; };
+		07DD43A8176178AC00492F6A /* GC3DFlipTransitionStyleSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GC3DFlipTransitionStyleSegue.h; sourceTree = "<group>"; };
+		07DD43A9176178AC00492F6A /* GC3DFlipTransitionStyleSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GC3DFlipTransitionStyleSegue.m; sourceTree = "<group>"; };
+		07DD43AB176178AC00492F6A /* wood.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wood.jpg; sourceTree = "<group>"; };
+		07DD43AF176178F800492F6A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		07DD43B11761790200492F6A /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		07DD43B31761790C00492F6A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		07DD43BA17617C3400492F6A /* Bookcase.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Bookcase.jpg; sourceTree = "<group>"; };
 		07E92D4F170BAE5200402366 /* SecretTapDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecretTapDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07E92D52170BAE5200402366 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		07E92D54170BAE5200402366 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -57,6 +72,9 @@
 				07E92D55170BAE5200402366 /* Foundation.framework in Frameworks */,
 				07E92D57170BAE5200402366 /* CoreGraphics.framework in Frameworks */,
 				07527CA01745BD34002559D2 /* AVFoundation.framework in Frameworks */,
+				07DD43B51761792900492F6A /* QuartzCore.framework in Frameworks */,
+				07DD43B61761792900492F6A /* OpenGLES.framework in Frameworks */,
+				07DD43B71761792900492F6A /* GLKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +90,16 @@
 			name = SecretTapGestureRecognizer;
 			path = ../SecretTapGestureRecognizer;
 			sourceTree = "<group>";
+		};
+		07DD43A7176178AC00492F6A /* GC3DFlipTransitionStyleSegue */ = {
+			isa = PBXGroup;
+			children = (
+				07DD43A8176178AC00492F6A /* GC3DFlipTransitionStyleSegue.h */,
+				07DD43A9176178AC00492F6A /* GC3DFlipTransitionStyleSegue.m */,
+				07DD43AB176178AC00492F6A /* wood.jpg */,
+			);
+			path = GC3DFlipTransitionStyleSegue;
+			sourceTree = SOURCE_ROOT;
 		};
 		07E92D46170BAE5200402366 = {
 			isa = PBXGroup;
@@ -98,6 +126,9 @@
 				07E92D54170BAE5200402366 /* Foundation.framework */,
 				07E92D56170BAE5200402366 /* CoreGraphics.framework */,
 				07527C9F1745BD34002559D2 /* AVFoundation.framework */,
+				07DD43AF176178F800492F6A /* QuartzCore.framework */,
+				07DD43B31761790C00492F6A /* OpenGLES.framework */,
+				07DD43B11761790200492F6A /* GLKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -105,11 +136,12 @@
 		07E92D58170BAE5200402366 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				07E92D6A170BAE5300402366 /* MainStoryboard.storyboard */,
 				07E92D61170BAE5200402366 /* STAppDelegate.h */,
 				07E92D62170BAE5200402366 /* STAppDelegate.m */,
-				07E92D6A170BAE5300402366 /* MainStoryboard.storyboard */,
 				07E92D70170BAE5300402366 /* STViewController.h */,
 				07E92D71170BAE5300402366 /* STViewController.m */,
+				07DD43A7176178AC00492F6A /* GC3DFlipTransitionStyleSegue */,
 				07E92D59170BAE5200402366 /* Supporting Files */,
 			);
 			name = Demo;
@@ -119,15 +151,17 @@
 		07E92D59170BAE5200402366 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				07E92D5A170BAE5200402366 /* SecretTapDemo-Info.plist */,
-				07E92D5B170BAE5200402366 /* InfoPlist.strings */,
+				07DD43BA17617C3400492F6A /* Bookcase.jpg */,
 				07E92D5E170BAE5200402366 /* main.m */,
+				07527CA11745BDA3002559D2 /* SecretUnlock.mp3 */,
 				07E92D60170BAE5200402366 /* SecretTapDemo-Prefix.pch */,
+				07E92D5A170BAE5200402366 /* SecretTapDemo-Info.plist */,
+				07E92D68170BAE5300402366 /* Default-568h@2x.png */,
 				07E92D64170BAE5300402366 /* Default.png */,
 				07E92D66170BAE5300402366 /* Default@2x.png */,
-				07E92D68170BAE5300402366 /* Default-568h@2x.png */,
+				07832B59175C3AA600C2C7CC /* Icon.png */,
 				07527C9D1745BB98002559D2 /* Secret.png */,
-				07527CA11745BDA3002559D2 /* SecretUnlock.mp3 */,
+				07E92D5B170BAE5200402366 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -191,6 +225,9 @@
 				07E92D6C170BAE5300402366 /* MainStoryboard.storyboard in Resources */,
 				07527C9E1745BB98002559D2 /* Secret.png in Resources */,
 				07527CA21745BDA3002559D2 /* SecretUnlock.mp3 in Resources */,
+				07832B5A175C3AA600C2C7CC /* Icon.png in Resources */,
+				07DD43AE176178AC00492F6A /* wood.jpg in Resources */,
+				07DD43BB17617C3400492F6A /* Bookcase.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +242,7 @@
 				07E92D63170BAE5300402366 /* STAppDelegate.m in Sources */,
 				07E92D72170BAE5300402366 /* STViewController.m in Sources */,
 				07C02DFB1745891E0015DA69 /* SecretTapGestureRecognizer.m in Sources */,
+				07DD43AC176178AC00492F6A /* GC3DFlipTransitionStyleSegue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

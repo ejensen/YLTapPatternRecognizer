@@ -8,7 +8,7 @@
 
 #import "STViewController.h"
 #import "SecretTapGestureRecognizer.h"
-
+#import "GC3DFlipTransitionStyleSegue.h"
 #import <AVFoundation/AVFoundation.h>
 
 @interface STViewController ()
@@ -24,24 +24,19 @@
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    self.successImageView.hidden = YES;
-    self.view.backgroundColor = [UIColor blackColor];
+    self.tapFlashView.alpha = 0.08;
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.tapFlashView.alpha = 0;
 }
 
 - (void)didSecretTap:(SecretTapGestureRecognizer *)gestureRecognizer {
     NSLog(@"Secret Unlocked!");
     
+    self.tapFlashView.alpha = 0;
     [self performSelectorInBackground:@selector(playChime) withObject:nil];
-    
-    self.successImageView.alpha = 0;
-    self.successImageView.hidden = NO;
-    [UIView animateWithDuration:0.5 animations:^{
-        self.successImageView.alpha = 1;
-    }];
+    [self performSegueWithIdentifier:@"SecretUnlockedSegue" sender:self];
 }
 
 - (void)prepareChime {
