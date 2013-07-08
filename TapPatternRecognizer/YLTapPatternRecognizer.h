@@ -11,7 +11,7 @@
 @class YLTapPatternRecognizer;
 
 /**
- * UIGestureRecognizer subclass that looks for a sequence of taps that matches a predefined pattern.
+ * UIGestureRecognizer subclass that looks for a sequence of taps that match a predefined pattern.
  */
 @interface YLTapPatternRecognizer : UIGestureRecognizer
 
