@@ -18,15 +18,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self performSelectorInBackground:@selector(prepareChime) withObject:nil];
-    [self.view addGestureRecognizer:[[YLTapPatternRecognizer alloc] initWithTarget:self action:@selector(didSecretTap:)]];
+    
+    YLTapPatternRecognizer *tapPatterRecognizer = [[YLTapPatternRecognizer alloc] initWithTarget:self
+                                                                                          action:@selector(didSecretTap:)];
+    tapPatterRecognizer.delegate = self;
+    self.sequenceView.sequence = tapPatterRecognizer.pattern;
+    [self.view addGestureRecognizer:tapPatterRecognizer];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [super touchesBegan:touches withEvent:event];
     self.tapFlashView.alpha = 0.9;
+    self.sequenceView.numberCompleted = (self.sequenceView.numberCompleted) % (self.sequenceView.sequence.count + 1) + 1;
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    [super touchesEnded:touches withEvent:event];
     self.tapFlashView.alpha = 1;
 }
 
@@ -36,6 +45,12 @@
     self.tapFlashView.alpha = 1;
     [self performSelectorInBackground:@selector(playChime) withObject:nil];
     [self performSegueWithIdentifier:@"SecretUnlockedSegue" sender:self];
+}
+
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
+{
+    self.sequenceView.numberCompleted = 0;
+    return YES;
 }
 
 - (void)prepareChime {
@@ -51,6 +66,12 @@
 
 - (void)playChime {
     [self.audioPlayer play];
+}
+
+- (void)viewDidUnload {
+    self.tapFlashView = nil;
+    self.sequenceView = nil;
+    [super viewDidUnload];
 }
 
 @end

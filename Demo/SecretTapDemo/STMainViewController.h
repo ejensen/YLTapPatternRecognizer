@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "STSequenceView.h"
 
-@interface STMainViewController : UIViewController
+@interface STMainViewController : UIViewController<UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *tapFlashView;
+@property (weak, nonatomic) IBOutlet STSequenceView *sequenceView;
 
 @end

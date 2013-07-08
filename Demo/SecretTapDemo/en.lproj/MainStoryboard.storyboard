@@ -16,10 +16,15 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
+                            <view opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" id="KJp-Cy-Tvg" customClass="STSequenceView">
+                                <rect key="frame" x="0.0" y="498" width="320" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="sequenceView" destination="KJp-Cy-Tvg" id="MgZ-b2-SyS"/>
                         <outlet property="tapFlashView" destination="QZa-KR-Jja" id="5Q8-RI-CwR"/>
                         <segue destination="2A5-3P-eG4" kind="modal" identifier="SecretUnlockedSegue" customClass="GC3DFlipTransitionStyleSegue" modalTransitionStyle="flipHorizontal" id="eFx-u2-bhA"/>
                     </connections>
@@ -32,27 +37,21 @@
         <scene sceneID="S8Y-ta-uUg">
             <objects>
                 <viewController id="2A5-3P-eG4" customClass="STSecretViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Gey-hi-L5d">
+                    <button key="view" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ksg-bV-NVA">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ksg-bV-NVA">
-                                <rect key="frame" x="40" y="194" width="240" height="160"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" backgroundImage="Secret.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="dismiss:" destination="2A5-3P-eG4" eventType="touchUpInside" id="cNg-b2-qaj"/>
-                                </connections>
-                            </button>
-                        </subviews>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                        <state key="normal" image="Secret.png">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <state key="highlighted">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="dismiss:" destination="2A5-3P-eG4" eventType="touchUpInside" id="cNg-b2-qaj"/>
+                        </connections>
+                    </button>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LRr-Bi-9Yy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -67,6 +66,7 @@
         <class className="STMainViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/STMainViewController.h"/>
             <relationships>
+                <relationship kind="outlet" name="sequenceView" candidateClass="STSequenceView"/>
                 <relationship kind="outlet" name="tapFlashView" candidateClass="UIView"/>
             </relationships>
         </class>
@@ -75,6 +75,9 @@
             <relationships>
                 <relationship kind="action" name="dismiss:"/>
             </relationships>
+        </class>
+        <class className="STSequenceView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/STSequenceView.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

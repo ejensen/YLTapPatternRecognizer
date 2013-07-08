@@ -13,6 +13,9 @@
 		07527CA21745BDA3002559D2 /* SecretUnlock.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 07527CA11745BDA3002559D2 /* SecretUnlock.mp3 */; };
 		07832B5A175C3AA600C2C7CC /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 07832B59175C3AA600C2C7CC /* Icon.png */; };
 		07C02DFB1745891E0015DA69 /* YLTapPatternRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C02DFA1745891E0015DA69 /* YLTapPatternRecognizer.m */; };
+		07D77953178A45990005A1E8 /* STSequenceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D77952178A45990005A1E8 /* STSequenceView.m */; };
+		07D77958178A5AEE0005A1E8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D77956178A5ADF0005A1E8 /* CoreGraphics.framework */; };
+		07D77959178A5AEE0005A1E8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D77954178A5AD90005A1E8 /* QuartzCore.framework */; };
 		07E92D53170BAE5200402366 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E92D52170BAE5200402366 /* UIKit.framework */; };
 		07E92D55170BAE5200402366 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E92D54170BAE5200402366 /* Foundation.framework */; };
 		07E92D5D170BAE5200402366 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07E92D5B170BAE5200402366 /* InfoPlist.strings */; };
@@ -34,6 +37,10 @@
 		07832B59175C3AA600C2C7CC /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		07C02DF91745891E0015DA69 /* YLTapPatternRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLTapPatternRecognizer.h; sourceTree = "<group>"; };
 		07C02DFA1745891E0015DA69 /* YLTapPatternRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLTapPatternRecognizer.m; sourceTree = "<group>"; };
+		07D77951178A45990005A1E8 /* STSequenceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSequenceView.h; sourceTree = "<group>"; };
+		07D77952178A45990005A1E8 /* STSequenceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSequenceView.m; sourceTree = "<group>"; };
+		07D77954178A5AD90005A1E8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		07D77956178A5ADF0005A1E8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		07E92D4F170BAE5200402366 /* SecretTapDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecretTapDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07E92D52170BAE5200402366 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		07E92D54170BAE5200402366 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -58,6 +65,8 @@
 			files = (
 				07E92D53170BAE5200402366 /* UIKit.framework in Frameworks */,
 				07E92D55170BAE5200402366 /* Foundation.framework in Frameworks */,
+				07D77958178A5AEE0005A1E8 /* CoreGraphics.framework in Frameworks */,
+				07D77959178A5AEE0005A1E8 /* QuartzCore.framework in Frameworks */,
 				07527CA01745BD34002559D2 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,9 +105,11 @@
 		07E92D51170BAE5200402366 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				07E92D52170BAE5200402366 /* UIKit.framework */,
-				07E92D54170BAE5200402366 /* Foundation.framework */,
 				07527C9F1745BD34002559D2 /* AVFoundation.framework */,
+				07D77956178A5ADF0005A1E8 /* CoreGraphics.framework */,
+				07E92D54170BAE5200402366 /* Foundation.framework */,
+				07D77954178A5AD90005A1E8 /* QuartzCore.framework */,
+				07E92D52170BAE5200402366 /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -113,6 +124,8 @@
 				07E92D71170BAE5300402366 /* STMainViewController.m */,
 				074F11E9178A00B1008DA736 /* STSecretViewController.h */,
 				074F11EA178A00B1008DA736 /* STSecretViewController.m */,
+				07D77951178A45990005A1E8 /* STSequenceView.h */,
+				07D77952178A45990005A1E8 /* STSequenceView.m */,
 				07E92D59170BAE5200402366 /* Supporting Files */,
 			);
 			name = Demo;
@@ -211,6 +224,7 @@
 				07E92D72170BAE5300402366 /* STMainViewController.m in Sources */,
 				07C02DFB1745891E0015DA69 /* YLTapPatternRecognizer.m in Sources */,
 				074F11EB178A00B1008DA736 /* STSecretViewController.m in Sources */,
+				07D77953178A45990005A1E8 /* STSequenceView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

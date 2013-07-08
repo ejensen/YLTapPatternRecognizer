@@ -7,6 +7,9 @@
 
 #import <UIKit/UIKit.h>
 
+
+@class YLTapPatternRecognizer;
+
 /**
  * UIGestureRecognizer subclass that looks for a sequence of taps that matches a predefined pattern.
  */
