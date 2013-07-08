@@ -1,26 +1,25 @@
 //
 //  STViewController.m
-//  SecretTapGestureRecognizer
+//  SecretTapDemo
 //
 //  Created by Eric Jensen on 5/15/13.
 //  Copyright (c) 2013 Yeti Labs. All rights reserved.
 //
 
-#import "STViewController.h"
-#import "SecretTapGestureRecognizer.h"
-#import "GC3DFlipTransitionStyleSegue.h"
+#import "STMainViewController.h"
+#import "YLTapPatternRecognizer.h"
 #import <AVFoundation/AVFoundation.h>
 
-@interface STViewController ()
+@interface STMainViewController ()
 @property (nonatomic, strong) AVAudioPlayer *audioPlayer;
 @end
 
-@implementation STViewController
+@implementation STMainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self performSelectorInBackground:@selector(prepareChime) withObject:nil];
-    [self.view addGestureRecognizer:[[SecretTapGestureRecognizer alloc] initWithTarget:self action:@selector(didSecretTap:)]];
+    [self.view addGestureRecognizer:[[YLTapPatternRecognizer alloc] initWithTarget:self action:@selector(didSecretTap:)]];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -31,7 +30,7 @@
     self.tapFlashView.alpha = 1;
 }
 
-- (void)didSecretTap:(SecretTapGestureRecognizer *)gestureRecognizer {
+- (void)didSecretTap:(YLTapPatternRecognizer *)gestureRecognizer {
     NSLog(@"Secret Unlocked!");
     
     self.tapFlashView.alpha = 1;
