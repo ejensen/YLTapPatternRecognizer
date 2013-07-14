@@ -8,10 +8,11 @@
 
 #import "STMainViewController.h"
 #import "YLTapPatternRecognizer.h"
-#import <AVFoundation/AVFoundation.h>
+#import <AudioToolbox/AudioToolbox.h>
 
-@interface STMainViewController ()
-@property (nonatomic, strong) AVAudioPlayer *audioPlayer;
+@interface STMainViewController () {
+    SystemSoundID _unlockChime;
+}
 @end
 
 @implementation STMainViewController
@@ -19,59 +20,43 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self performSelectorInBackground:@selector(prepareChime) withObject:nil];
+    [self prepareChime];
     
     YLTapPatternRecognizer *tapPatterRecognizer = [[YLTapPatternRecognizer alloc] initWithTarget:self
                                                                                           action:@selector(didSecretTap:)];
-    tapPatterRecognizer.delegate = self;
-    self.sequenceView.sequence = tapPatterRecognizer.pattern;
+    tapPatterRecognizer.pattern = [YLTapPatterns shaveAndAHaircut];
+    self.sequenceView.total = tapPatterRecognizer.pattern.count;
     [self.view addGestureRecognizer:tapPatterRecognizer];
+}
+
+- (void)dealloc {
+    if (_unlockChime) {
+        AudioServicesDisposeSystemSoundID(_unlockChime);
+    }
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [super touchesBegan:touches withEvent:event];
-    self.tapFlashView.alpha = 0.9;
-    self.sequenceView.numberCompleted = (self.sequenceView.numberCompleted) % (self.sequenceView.sequence.count + 1) + 1;
-}
-
-- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-    [super touchesEnded:touches withEvent:event];
-    self.tapFlashView.alpha = 1;
+    self.sequenceView.completed++;
 }
 
 - (void)didSecretTap:(YLTapPatternRecognizer *)gestureRecognizer {
     NSLog(@"Secret Unlocked!");
     
-    self.tapFlashView.alpha = 1;
     [self performSelectorInBackground:@selector(playChime) withObject:nil];
     [self performSegueWithIdentifier:@"SecretUnlockedSegue" sender:self];
-}
-
-- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
-{
-    self.sequenceView.numberCompleted = 0;
-    return YES;
+    self.sequenceView.completed = 0;
 }
 
 - (void)prepareChime {
     NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"SecretUnlock" withExtension:@"mp3"];
-    NSError *error;
-    AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:&error];
-    if (!error && soundURL) {
-        self.audioPlayer = audioPlayer;
-        audioPlayer.volume = 0.5f;
-        [audioPlayer prepareToPlay];
-    }
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &_unlockChime);
 }
 
 - (void)playChime {
-    [self.audioPlayer play];
-}
-
-- (void)viewDidUnload {
-    self.tapFlashView = nil;
-    self.sequenceView = nil;
-    [super viewDidUnload];
+    if (_unlockChime) {
+        AudioServicesPlaySystemSound(_unlockChime);
+    }
 }
 
 @end

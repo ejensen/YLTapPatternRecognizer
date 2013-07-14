@@ -15,14 +15,11 @@
 
 @implementation STSequenceView
 
-@synthesize sequence = _sequence;
-@synthesize indicatorColor = _indicatorColor;
-@synthesize numberCompleted = _numberCompleted;
+#pragma mark - Properties
 
-- (void)setSequence:(NSArray *)sequence {
-    _sequence = [sequence copy];
-    [self resetIndictors];
-}
+@synthesize indicatorColor = _indicatorColor;
+@synthesize total = _total;
+@synthesize completed = _completed;
 
 - (void)setIndicatorColor:(UIColor *)indicatorColor {
     if ([indicatorColor isEqual:_indicatorColor]) {
@@ -31,12 +28,19 @@
     }
 }
 
-- (void)setNumberCompleted:(NSUInteger)numberCompleted {
-    if (numberCompleted != _numberCompleted) {
-        _numberCompleted = numberCompleted;
+- (void)setTotal:(NSUInteger)total {
+    _total = total;
+    [self layoutIndictors];
+}
+
+- (void)setCompleted:(NSUInteger)completed {
+    if (completed != _completed) {
+        _completed = completed;
         [self refreshIndicators];
     }
 }
+
+#pragma mark - Initialization
 
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
@@ -54,23 +58,35 @@
     return self;
 }
 
-- (void)resetIndictors {
-    self.numberCompleted = 0;
+#pragma mark - Layout
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    [self layoutIndictors];
+}
+
+- (void)layoutIndictors {
+    self.completed = 0;
     
-    for (UIView *indicator in self.indicatorViews) {
-        [indicator removeFromSuperview];
-    }
+    [self.indicatorViews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     
-    NSUInteger indicatorCount = self.sequence.count + 1;
+    NSUInteger indicatorCount = self.total + 1;
     self.indicatorViews = [NSMutableArray arrayWithCapacity:indicatorCount];
     
-    const CGFloat indicatorDiameter = 8;
-    CGFloat indicatorSpacing = self.bounds.size.width / (indicatorCount + 1);
-    CGFloat y = (self.bounds.size.height - indicatorDiameter) / 2;
+    const CGFloat indicatorRadius = 8;
+    const CGFloat indicatorDiameter = indicatorRadius * 2;
+    const CGFloat borderWidth = indicatorRadius / 4;
+    CGPoint center = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
+    CGFloat radius = fminf(center.x, center.y) - indicatorDiameter;
+    
+    CGFloat step = M_PI * 2 / indicatorCount;
     for (size_t i = 0; i < indicatorCount; ++i) {
-        UIView *indicator = [[UIView alloc] initWithFrame:CGRectMake(indicatorSpacing * (i + 1), y, indicatorDiameter, indicatorDiameter)];
-        indicator.layer.cornerRadius = indicatorDiameter/2;
-        indicator.layer.borderWidth = 1;
+        UIView *indicator = [[UIView alloc] initWithFrame:CGRectMake(center.x - indicatorRadius + radius * sinf(i * step),
+                                                                     center.y - indicatorRadius + radius * -cosf(i * step),
+                                                                     indicatorDiameter,
+                                                                     indicatorDiameter)];
+        indicator.layer.cornerRadius = indicatorRadius;
+        indicator.layer.borderWidth = borderWidth;
         indicator.layer.borderColor = self.indicatorColor.CGColor;
         [self.indicatorViews addObject:indicator];
         [self addSubview:indicator];
@@ -80,11 +96,8 @@
 }
 
 - (void)refreshIndicators {
-    for (size_t i = 0; i < self.indicatorViews.count; ++i) {
-        UIView *indicator = self.indicatorViews[i];
-        indicator.backgroundColor = (i >= self.numberCompleted) ? nil
-                                                                : self.indicatorColor;
-    }
+    [self.indicatorViews makeObjectsPerformSelector:@selector(setBackgroundColor:) withObject:nil];
+    [self.indicatorViews[self.completed % self.indicatorViews.count] setBackgroundColor:self.indicatorColor];
 }
 
 @end

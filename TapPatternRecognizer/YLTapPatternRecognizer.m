@@ -43,6 +43,7 @@
     _tapIndex = 0;
     _lastTapTimestamp = 0;
     [_tapTimestamps removeAllObjects];
+    [super reset];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -97,6 +98,7 @@
 }
 
 @end
+
 
 @implementation YLTapPatterns
 

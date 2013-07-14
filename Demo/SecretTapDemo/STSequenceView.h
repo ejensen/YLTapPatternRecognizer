@@ -10,8 +10,8 @@
 
 @interface STSequenceView : UIView
 
-@property (nonatomic, copy) NSArray *sequence;
 @property (nonatomic, copy) UIColor *indicatorColor;
-@property (nonatomic, assign) NSUInteger numberCompleted;
+@property (nonatomic, assign) NSUInteger total;
+@property (nonatomic, assign) NSUInteger completed;
 
 @end

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="13A497d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="13A510d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -7,7 +7,7 @@
         <!--Main View Controller-->
         <scene sceneID="5">
             <objects>
-                <viewController id="2" customClass="STMainViewController" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" id="2" customClass="STMainViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -17,16 +17,16 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <view opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" id="KJp-Cy-Tvg" customClass="STSequenceView">
-                                <rect key="frame" x="0.0" y="498" width="320" height="50"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="sequenceView" destination="KJp-Cy-Tvg" id="MgZ-b2-SyS"/>
-                        <outlet property="tapFlashView" destination="QZa-KR-Jja" id="5Q8-RI-CwR"/>
-                        <segue destination="2A5-3P-eG4" kind="modal" identifier="SecretUnlockedSegue" customClass="GC3DFlipTransitionStyleSegue" modalTransitionStyle="flipHorizontal" id="eFx-u2-bhA"/>
+                        <segue destination="2A5-3P-eG4" kind="modal" identifier="SecretUnlockedSegue" customClass="GC3DFlipTransitionStyleSegue" id="eFx-u2-bhA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -36,7 +36,7 @@
         <!--Secret View Controller-->
         <scene sceneID="S8Y-ta-uUg">
             <objects>
-                <viewController id="2A5-3P-eG4" customClass="STSecretViewController" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" id="2A5-3P-eG4" customClass="STSecretViewController" sceneMemberID="viewController">
                     <button key="view" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ksg-bV-NVA">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
@@ -67,7 +67,6 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/STMainViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="sequenceView" candidateClass="STSequenceView"/>
-                <relationship kind="outlet" name="tapFlashView" candidateClass="UIView"/>
             </relationships>
         </class>
         <class className="STSecretViewController" superclassName="UIViewController">
