@@ -11,7 +11,7 @@ Simply add the files in the `TapPatternRecognizer` folder to your project or add
 
 Build and run the `SecretTapDemo` project in Xcode to see `YLTapPatternRecognizer` in action.
 
-![demo recording](demo/secret-tap.gif)
+![demo recording](Demo/secret-tap.gif)
 
 ## Configuration
 
