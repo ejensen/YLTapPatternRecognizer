@@ -7,17 +7,17 @@ Use it to unlock easter eggs or beta features. But only for those who know the s
 
 Simply add the files in the `TapPatternRecognizer` folder to your project or add `YLTapPatternRecognizer` to your Podfile.
 
-## Demo
-
-Build and run the `SecretTapDemo` project in Xcode to see `YLTapPatternRecognizer` in action.
-
-![demo recording](Demo/secret-tap.gif)
-
 ## Configuration
 
 The default pattern is [shave and a haircut](http://en.wikipedia.org/wiki/Shave_and_a_Haircut), but any pattern can be used.
 
 See the [header](TapPatternRecognizer/YLTapPatternRecognizer.h) for full documentation.
+
+## Demo
+
+Build and run the `SecretTapDemo` project in Xcode to see `YLTapPatternRecognizer` in action.
+
+![demo recording](Demo/secret-tap.gif)
 
 ## License
 
