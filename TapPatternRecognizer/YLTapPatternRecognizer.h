@@ -48,7 +48,7 @@
  */
 + (NSArray *)rowRowRowYourBoat;
 /**
- * https://en.wikipedia.org/wiki/A-Hunting_We_Will_Go
+ * http://en.wikipedia.org/wiki/A-Hunting_We_Will_Go
  */
 + (NSArray *)aHuntingWeWillGo;
 
