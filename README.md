@@ -1,5 +1,5 @@
 # YLTapPatternRecognizer
-[![Badge w/ Version](http://cocoapod-badges.herokuapp.com/v/YLTapPatternRecognizer/badge.png)](http://cocoadocs.org/docsets/YLTapPatternRecognizer)
+[![Badge w/ Version](http://cocoapod-badges.herokuapp.com/v/YLTapPatternRecognizer/badge.png)](http://cocoadocs.org/docsets/YLTapPatternRecognizer) [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/ejensen/YLTapPatternRecognizer/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 [UIGestureRecognizer](http://developer.apple.com/library/ios/#documentation/uikit/reference/UIGestureRecognizer_Class/Reference/Reference.html) subclass that matches taps to a particular pattern.
 Use it to unlock easter eggs or beta features. But only for those who know the secret code.
