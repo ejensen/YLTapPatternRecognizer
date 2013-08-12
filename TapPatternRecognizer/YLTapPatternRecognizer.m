@@ -32,7 +32,7 @@
     if (self) {
         self.delaysTouchesEnded = NO;
         self.cancelsTouchesInView = NO;
-        self.minimumTapInterval = 0.05;
+        self.minimumTapInterval = 0.1;
         self.tolerance = 0.05;
         self.pattern = [YLTapPatterns shaveAndAHaircut];
     }
