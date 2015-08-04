@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'YLTapPatternRecognizer'
-  s.version      = '0.1.0'
+  s.version      = '1.0.0'
   s.summary      = 'UIGestureRecognizer subclass for detecting tap patterns.'
   s.homepage     = 'https://github.com/ejensen/TapPatternRecognizer'
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
