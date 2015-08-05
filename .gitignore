@@ -1,2 +1,4 @@
 xcuserdata
 DerivedData
+.DS_Store
+*.xccheckout
