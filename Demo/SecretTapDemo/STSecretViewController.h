@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Yeti Labs. All rights reserved.
 //
 
-@interface STSecretViewController : UIViewController
+#import <UIKit/UIKit.h>
 
-- (IBAction)dismiss:(id)sender;
+@interface STSecretViewController : UIViewController
 
 @end

@@ -10,7 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 
 @interface STSequenceView ()
-@property (nonatomic, strong) NSMutableArray *indicatorViews;
+@property (nonatomic, strong) NSMutableArray<UIView *> *indicatorViews;
 @end
 
 @implementation STSequenceView
@@ -42,15 +42,7 @@
 
 #pragma mark - Initialization
 
-- (id)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame];
-    if (self) {
-        _indicatorColor = [UIColor lightGrayColor];
-    }
-    return self;
-}
-
-- (id)initWithCoder:(NSCoder *)aDecoder {
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
         _indicatorColor = [UIColor lightGrayColor];
@@ -77,12 +69,12 @@
     const CGFloat indicatorDiameter = indicatorRadius * 2;
     const CGFloat borderWidth = indicatorRadius / 4;
     CGPoint center = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
-    CGFloat radius = fminf(center.x, center.y) - indicatorDiameter;
+    CGFloat radius = fmin(center.x, center.y) - indicatorDiameter;
     
     CGFloat step = M_PI * 2 / indicatorCount;
     for (size_t i = 0; i < indicatorCount; ++i) {
-        UIView *indicator = [[UIView alloc] initWithFrame:CGRectMake(center.x - indicatorRadius + radius * sinf(i * step),
-                                                                     center.y - indicatorRadius + radius * -cosf(i * step),
+        UIView *indicator = [[UIView alloc] initWithFrame:CGRectMake(center.x - indicatorRadius + radius * sin(i * step),
+                                                                     center.y - indicatorRadius + radius * -cos(i * step),
                                                                      indicatorDiameter,
                                                                      indicatorDiameter)];
         indicator.layer.cornerRadius = indicatorRadius;

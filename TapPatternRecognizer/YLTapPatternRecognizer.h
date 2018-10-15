@@ -7,8 +7,7 @@
 
 #import <UIKit/UIKit.h>
 
-
-@class YLTapPatternRecognizer;
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * UIGestureRecognizer subclass that looks for a sequence of taps that match a predefined pattern.
@@ -17,21 +16,21 @@
 
 /**
  * Array of NSNumbers representing the relative interval between taps.
- * @note The default is [YLTapPatterns shaveAndAHaircut]
+ * @note The default is [YLTapPatterns shaveAndAHaircut].
  */
-@property (nonatomic, copy) NSArray *pattern;
+@property (nonatomic, copy) NSArray<NSNumber *> *pattern;
 
 /**
- * The minimum time required between touches in order for it to be considered a descrete tap.
+ * The minimum time required between touches in order for it to be considered a discrete tap.
  * @note The default value is 50 milliseconds.
  */
-@property (nonatomic, assign) NSTimeInterval minimumTapInterval;
+@property (nonatomic) NSTimeInterval minimumTapInterval;
 
 /**
  * The maximum percentage of error allowed for pattern recognition.
  * @note The default value is 0.05 (5.0%).
  */
-@property (nonatomic, assign) double tolerance;
+@property (nonatomic) double tolerance;
 
 @end
 
@@ -42,14 +41,18 @@
 /**
  * http://en.wikipedia.org/wiki/Shave_and_a_Haircut
  */
-+ (NSArray *)shaveAndAHaircut;
++ (NSArray<NSNumber *> *)shaveAndAHaircut;
+
 /**
  * http://en.wikipedia.org/wiki/Row,_Row,_Row_Your_Boat
  */
-+ (NSArray *)rowRowRowYourBoat;
++ (NSArray<NSNumber *> *)rowRowRowYourBoat;
+
 /**
  * http://en.wikipedia.org/wiki/A-Hunting_We_Will_Go
  */
-+ (NSArray *)aHuntingWeWillGo;
++ (NSArray<NSNumber *> *)aHuntingWeWillGo;
 
 @end
+
+NS_ASSUME_NONNULL_END

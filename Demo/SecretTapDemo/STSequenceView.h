@@ -8,10 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface STSequenceView : UIView
 
 @property (nonatomic, copy) UIColor *indicatorColor;
-@property (nonatomic, assign) NSUInteger total;
-@property (nonatomic, assign) NSUInteger completed;
+@property (nonatomic) NSUInteger total;
+@property (nonatomic) NSUInteger completed;
 
 @end
+
+NS_ASSUME_NONNULL_END

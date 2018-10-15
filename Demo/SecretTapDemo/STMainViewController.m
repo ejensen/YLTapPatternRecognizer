@@ -8,11 +8,13 @@
 
 #import "STMainViewController.h"
 #import "YLTapPatternRecognizer.h"
+#import "STSequenceView.h"
 #import <AudioToolbox/AudioToolbox.h>
 
 @interface STMainViewController () {
     SystemSoundID _unlockChime;
 }
+@property (nonatomic, weak) IBOutlet STSequenceView *sequenceView;
 @end
 
 @implementation STMainViewController
@@ -35,7 +37,7 @@
     }
 }
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [super touchesBegan:touches withEvent:event];
     self.sequenceView.completed++;
 }

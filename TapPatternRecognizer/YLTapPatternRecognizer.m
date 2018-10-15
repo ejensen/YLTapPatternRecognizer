@@ -20,14 +20,13 @@
 
 @synthesize pattern = _pattern;
 
-- (void)setPattern:(NSArray *)pattern
-{
+- (void)setPattern:(NSArray *)pattern {
     _pattern = [pattern copy];
     _tapPatternDuration = [[pattern valueForKeyPath:@"@sum.self"] doubleValue];
     _tapTimestamps = [NSMutableArray arrayWithCapacity:pattern.count + 1];
 }
 
-- (id)initWithTarget:(id)target action:(SEL)action {
+- (instancetype)initWithTarget:(id)target action:(SEL)action {
     self = [super initWithTarget:target action:action];
     if (self) {
         self.delaysTouchesEnded = NO;
@@ -102,15 +101,15 @@
 
 @implementation YLTapPatterns
 
-+ (NSArray *)shaveAndAHaircut {
++ (NSArray<NSNumber *> *)shaveAndAHaircut {
     return @[ @2, @1, @1, @2, @4, @2 ];
 }
 
-+ (NSArray *)rowRowRowYourBoat {
++ (NSArray<NSNumber *> *)rowRowRowYourBoat {
     return @[ @3, @3, @3, @1, @3, @2, @2, @2, @2 ];
 }
 
-+ (NSArray *)aHuntingWeWillGo {
++ (NSArray<NSNumber *> *)aHuntingWeWillGo {
     return @[ @1, @2, @1, @2 , @1, @4, @1, @2, @1, @2 , @1 ];
 }
 

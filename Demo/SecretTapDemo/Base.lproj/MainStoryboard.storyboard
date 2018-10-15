@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController modalTransitionStyle="flipHorizontal" id="2" customClass="STMainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gig-sx-Q7J"/>
+                        <viewControllerLayoutGuide type="bottom" id="LsU-98-hto"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" image="Key" translatesAutoresizingMaskIntoConstraints="NO" id="QZa-KR-Jja">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <view opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KJp-Cy-Tvg" customClass="STSequenceView">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QZa-KR-Jja" firstAttribute="leading" secondItem="3" secondAttribute="leading" id="5kZ-GL-N5U"/>
+                            <constraint firstAttribute="trailing" secondItem="KJp-Cy-Tvg" secondAttribute="trailing" id="6zm-N1-8lr"/>
+                            <constraint firstItem="KJp-Cy-Tvg" firstAttribute="leading" secondItem="3" secondAttribute="leading" id="NEq-wh-0DD"/>
+                            <constraint firstAttribute="trailing" secondItem="QZa-KR-Jja" secondAttribute="trailing" id="VRq-GV-ezk"/>
+                            <constraint firstItem="LsU-98-hto" firstAttribute="top" secondItem="KJp-Cy-Tvg" secondAttribute="bottom" id="bJE-z5-IGD"/>
+                            <constraint firstItem="KJp-Cy-Tvg" firstAttribute="top" secondItem="gig-sx-Q7J" secondAttribute="bottom" id="kGa-y3-06m"/>
+                            <constraint firstItem="QZa-KR-Jja" firstAttribute="top" secondItem="gig-sx-Q7J" secondAttribute="bottom" id="rbU-Zj-JnF"/>
+                            <constraint firstItem="LsU-98-hto" firstAttribute="top" secondItem="QZa-KR-Jja" secondAttribute="bottom" id="wjo-u5-4Lv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="sequenceView" destination="KJp-Cy-Tvg" id="MgZ-b2-SyS"/>
+                        <segue destination="2A5-3P-eG4" kind="presentation" identifier="SecretUnlockedSegue" modalTransitionStyle="flipHorizontal" id="eFx-u2-bhA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-212.48000000000002" y="63.926057960525"/>
+        </scene>
+        <!--Secret View Controller-->
+        <scene sceneID="S8Y-ta-uUg">
+            <objects>
+                <viewController modalTransitionStyle="flipHorizontal" id="2A5-3P-eG4" customClass="STSecretViewController" sceneMemberID="viewController">
+                    <button key="view" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ksg-bV-NVA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                        <state key="normal" image="Secret">
+                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <state key="highlighted">
+                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="dismiss:" destination="2A5-3P-eG4" eventType="touchUpInside" id="cNg-b2-qaj"/>
+                        </connections>
+                    </button>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LRr-Bi-9Yy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="500" y="63"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Key" width="114" height="114"/>
+        <image name="Secret" width="240" height="160"/>
+    </resources>
+</document>

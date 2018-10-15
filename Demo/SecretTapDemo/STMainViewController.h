@@ -7,10 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "STSequenceView.h"
 
 @interface STMainViewController : UIViewController
-
-@property (weak, nonatomic) IBOutlet STSequenceView *sequenceView;
 
 @end

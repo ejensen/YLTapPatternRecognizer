@@ -1,5 +1,5 @@
 # YLTapPatternRecognizer
-[![Build Status](https://travis-ci.org/ejensen/YLTapPatternRecognizer.svg)](https://travis-ci.org/ejensen/YLTapPatternRecognizer) [![CocoaPods](https://img.shields.io/cocoapods/v/YLTapPatternRecognizer.svg)](http://cocoadocs.org/docsets/YLTapPatternRecognizer) [![Licence](https://img.shields.io/github/license/ejensen/YLTapPatternRecognizer.svg)]()
+[![Build Status](https://travis-ci.org/ejensen/YLTapPatternRecognizer.svg)](https://travis-ci.org/ejensen/YLTapPatternRecognizer) [![CocoaPods](https://img.shields.io/cocoapods/v/YLTapPatternRecognizer.svg)](https://cocoapods.org/pods/YLTapPatternRecognizer)
 
 [UIGestureRecognizer](http://developer.apple.com/library/ios/#documentation/uikit/reference/UIGestureRecognizer_Class/Reference/Reference.html) subclass that matches taps to a particular pattern.
 Use it to unlock easter eggs or beta features. But only for those who know the secret code.
